@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import github from '../img/github-icon.svg'
 import logo from '../img/logo.svg'
+import phoneLogo from '../img/logo.png'
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -38,6 +39,7 @@ const Navbar = class extends React.Component {
         className="navbar is-transparent"
         role="navigation"
         aria-label="main-navigation"
+        style={{ display: 'flex', flexDirection: 'column' }}
       >
         <div className="container">
           <div className="navbar-brand">
@@ -89,6 +91,44 @@ const Navbar = class extends React.Component {
               </a>
             </div>
           </div>
+        </div>
+        <div
+          style={{
+            height: 125,
+            background: '#8C5ACC',
+            borderBottomRightRadius: 35,
+            borderBottomLeftRadius: 35,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between'
+          }}
+        >
+          <Link to="/">
+            
+            <img
+              src={phoneLogo}
+              alt="phone-logo"
+              style={{
+              height: 65,
+              borderRadius: 1000,
+              width: 'auto',
+              background:'#ffffff',
+              marginLeft: 12
+              }}
+            />
+          </Link>
+          <p
+            style={{
+            fontSize: 32,
+            letterSpacing: 1.25,
+            fontFamily: 'Montserrat',
+            fontWeight: 600,
+            margin: 20,
+            color: '#ffffff'
+            }}
+          >
+            onecard.bio
+          </p>
         </div>
       </nav>
     )

@@ -1,11 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/swiper.scss'
 
 const FeatureGrid = ({ gridItems }) => (
-  <div className="columns is-multiline">
-    {gridItems.map((item) => (
-      <div key={item.text} className="column is-6">
+  <Swiper
+    spaceBetween={20}
+    slidesPerView={'auto'}
+  >
+    {gridItems.map((item, index) => (
+      <SwiperSlide key={index}>
         <section className="section">
           <div className="has-text-centered">
             <div
@@ -17,11 +22,21 @@ const FeatureGrid = ({ gridItems }) => (
               <PreviewCompatibleImage imageInfo={item} />
             </div>
           </div>
-          <p>{item.text}</p>
+          <p
+            style={{
+              fontFamily: 'Montserrat',
+              fontWeight: 400,
+              paddingLeft: 10,
+              paddingBottom: 20,
+              maxWidth: 160
+            }}
+          >
+            {item.text}
+          </p>
         </section>
-      </div>
+      </SwiperSlide>
     ))}
-  </div>
+  </Swiper>
 )
 
 FeatureGrid.propTypes = {
