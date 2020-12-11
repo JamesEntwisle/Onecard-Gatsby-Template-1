@@ -66,21 +66,21 @@ import CMS from 'netlify-cms-app'
 // import uploadcare from 'netlify-cms-media-library-uploadcare'
 // import cloudinary from 'netlify-cms-media-library-cloudinary'
 
-import AboutPagePreview from './preview-templates/AboutPagePreview'
-import BlogPostPreview from './preview-templates/BlogPostPreview'
+import BlogsPagePreview from './preview-templates/BlogsPagePreview'
 import BlogsPagePreview from './preview-templates/BlogsPagePreview'
 import VideosPagePreview from './preview-templates/VideosPagePreview'
 import PodcastsPagePreview from './preview-templates/PodcastsPagePreview'
+import SocialsPagePreview from './preview-templates/SocialsPagePreview'
 import IndexPagePreview from './preview-templates/IndexPagePreview'
 
 // CMS.registerMediaLibrary(uploadcare);
 // CMS.registerMediaLibrary(cloudinary);
 
 CMS.registerPreviewTemplate('index', IndexPagePreview)
-CMS.registerPreviewTemplate('about', AboutPagePreview)
-CMS.registerPreviewTemplate('products', VideosPagePreview)
-CMS.registerPreviewTemplate('products', PodcastsPagePreview)
-CMS.registerPreviewTemplate('blog', BlogPostPreview)
+CMS.registerPreviewTemplate('blogs', BlogsPagePreview)
+CMS.registerPreviewTemplate('videos', VideosPagePreview)
+CMS.registerPreviewTemplate('podcasts', PodcastsPagePreview)
+CMS.registerPreviewTemplate('socials', SocialsPagePreview)
 ```
 
 Note: Don't forget to also remove them from `package.json` and `yarn.lock` / `package-lock.json` using `yarn` or `npm`. During the build netlify-cms-app will bundle the media libraries as well, having them removed will save you build time.
