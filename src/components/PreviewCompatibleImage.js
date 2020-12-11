@@ -7,7 +7,8 @@ const PreviewCompatibleImage = ({ imageInfo }) => {
     borderRadius: 20,
     width: 180,
     height: 180,
-    boxShadow: '0 2px 5px #00000035'
+    boxShadow: '0 2px 5px #00000035',
+    marginBottom: 20,
   }
   const { alt = '', childImageSharp, image } = imageInfo
 
