@@ -1,7 +1,7 @@
 ---
 templateKey: 'podcasts-page'
 path: /podcasts
-title: Our Coffee
+title: Onecard.bio - Podcasts
 intro:
   blurbs:
     - image: /img/podcasts/podcasts_1.png

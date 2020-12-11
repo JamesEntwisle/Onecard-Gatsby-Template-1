@@ -1,7 +1,7 @@
 ---
 templateKey: 'blogs-page'
 path: /blogs
-title: Our Coffee
+title: Onecard.bio - Blogs
 intro:
   blurbs:
     - image: /img/blogs/blogs_1.jpg

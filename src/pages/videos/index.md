@@ -1,7 +1,7 @@
 ---
 templateKey: 'videos-page'
 path: /videos
-title: Our Coffee
+title: Onecard.bio - Videos
 intro:
   blurbs:
     - image: /img/videos/1.png

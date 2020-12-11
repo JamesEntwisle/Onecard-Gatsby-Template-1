@@ -1,7 +1,7 @@
 ---
 templateKey: 'socials-page'
 path: /socials
-title: Our Coffee
+title: Onecard.bio - Socials
 intro:
   blurbs:
     - image: /img/socials/socials_1.jpg
