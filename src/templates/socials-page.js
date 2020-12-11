@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import CardsVerticalGrid from '../components/CardsVerticalGrid'
 import ViewCardsHeader from '../components/ViewCardsHeader'
 import CloseButton from '../components/CloseButton'
 
-export const VideosPageTemplate = ({
+export const SocialsPageTemplate = ({
   image,
   title,
   heading,
@@ -20,7 +20,7 @@ export const VideosPageTemplate = ({
   <div className="content">
     <section className="section section--gradient" style={{ paddingTop: '1rem' }}>
       <div className="container">
-        <ViewCardsHeader activeIndex={1} />
+        <ViewCardsHeader activeIndex={3} />
         <div className="section" style={{ paddingTop: '1rem' }}>
           <CardsVerticalGrid gridItems={intro.blurbs} />
         </div>
@@ -30,7 +30,7 @@ export const VideosPageTemplate = ({
   </div>
 )
 
-VideosPageTemplate.propTypes = {
+SocialsPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
@@ -54,12 +54,12 @@ VideosPageTemplate.propTypes = {
   }),
 }
 
-const VideosPage = ({ data }) => {
+const SocialsPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
   return (
     <Layout>
-      <VideosPageTemplate
+      <SocialsPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
@@ -74,7 +74,7 @@ const VideosPage = ({ data }) => {
   )
 }
 
-VideosPage.propTypes = {
+SocialsPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -82,10 +82,10 @@ VideosPage.propTypes = {
   }),
 }
 
-export default VideosPage
+export default SocialsPage
 
-export const videosPageQuery = graphql`
-  query VideosPageTemplate($id: String!) {
+export const socialsPageQuery = graphql`
+  query SocialsPageTemplate($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title

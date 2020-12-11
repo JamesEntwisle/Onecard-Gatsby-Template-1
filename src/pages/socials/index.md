@@ -1,6 +1,6 @@
 ---
-templateKey: 'videos-page'
-path: /videos
+templateKey: 'socials-page'
+path: /socials
 title: Our Coffee
 image: /img/jumbotron.jpg
 heading: Great coffee with a conscience
@@ -11,28 +11,33 @@ description: >-
   anyone.
 intro:
   blurbs:
-    - image: /img/videos/1.png
-      text: >
-        What is onecard.bio?
-    - image: /img/videos/2.png
-      text: >
-        How to create a landing page for your content
-    - image: /img/videos/3.png
-      text: >
-        10x your link in bio conversions
-    - image: /img/videos/4.png
-      text: >
-        x Stop using Linktree x
-    - image: /img/videos/5.png
+    - image: /img/socials/socials_1.jpg
       text: >
         Goodbye Links.
-        Hello Cards Videos
-    - image: /img/videos/1.png
+        Hello Cards Socials
+    - image: /img/socials/socials_2.jpg
       text: >
-        "The greatest link in bio tool ever"
-    - image: /img/videos/2.png
+        Goodbye Links.
+        Hello Cards Socials
+    - image: /img/socials/socials_3.jpg
       text: >
-        What is onecard.bio?
+        Goodbye Links.
+        Hello Cards Socials
+    - image: /img/socials/socials_4.jpg
+      text: >
+        Your content. Together at last Socials
+    - image: /img/socials/socials_5.jpg
+      text: >
+        Goodbye Links.
+        Hello Cards Socials
+    - image: /img/socials/socials_6.jpg
+      text: >
+        Goodbye Links.
+        Hello Cards Socials
+    - image: /img/socials/socials_7.jpg
+      text: >
+        Goodbye Links.
+        Hello Cards Socials
   heading: What we offer
   description: >
     Kaldi is the ultimate spot for coffee lovers who want to learn about their

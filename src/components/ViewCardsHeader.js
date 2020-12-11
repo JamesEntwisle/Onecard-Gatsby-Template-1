@@ -13,7 +13,7 @@ const ViewCardsHeader = ({ activeIndex }) => {
     <div style={{ display: 'flex', justifyContent: 'space-between', marginLeft: 20, alignItems: 'baseline' }}>
       {
         headers.map((h, index) => (
-          <Link to={h.url} className={`${activeIndex === index && 'active-header'}`}>
+          <Link key={index} to={h.url} className={`${activeIndex === index && 'active-header'}`}>
             <h3 style={{ fontFamily: 'Montserrat', fontWeight: 700,  }}>
               {h.label}
             </h3>

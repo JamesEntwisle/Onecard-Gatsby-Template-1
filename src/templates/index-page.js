@@ -25,7 +25,7 @@ export const IndexPageTemplate = ({
             </h2>
             
             <h5 style={{ margin: 0 }}>
-              <Link to='/videos' itemProp="url" style={{ color: '#8C5ACC' }}>
+              <Link to='/blogs' itemProp="url" style={{ color: '#8C5ACC' }}>
                 View All <FaExternalLinkAlt />
               </Link>
             </h5>
@@ -49,7 +49,7 @@ export const IndexPageTemplate = ({
             </h2>
             
             <h5 style={{ margin: 0 }}>
-              <Link to='/videos' itemProp="url" style={{ color: '#8C5ACC' }}>
+              <Link to='/podcasts' itemProp="url" style={{ color: '#8C5ACC' }}>
                 View All <FaExternalLinkAlt />
               </Link>
             </h5>
@@ -61,7 +61,7 @@ export const IndexPageTemplate = ({
             </h2>
             
             <h5 style={{ margin: 0 }}>
-              <Link to='/videos' itemProp="url" style={{ color: '#8C5ACC' }}>
+              <Link to='/socials' itemProp="url" style={{ color: '#8C5ACC' }}>
                 View All <FaExternalLinkAlt />
               </Link>
             </h5>

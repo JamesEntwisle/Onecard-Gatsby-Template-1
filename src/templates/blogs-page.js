@@ -6,7 +6,7 @@ import CardsVerticalGrid from '../components/CardsVerticalGrid'
 import ViewCardsHeader from '../components/ViewCardsHeader'
 import CloseButton from '../components/CloseButton'
 
-export const VideosPageTemplate = ({
+export const BlogsPageTemplate = ({
   image,
   title,
   heading,
@@ -20,7 +20,7 @@ export const VideosPageTemplate = ({
   <div className="content">
     <section className="section section--gradient" style={{ paddingTop: '1rem' }}>
       <div className="container">
-        <ViewCardsHeader activeIndex={1} />
+        <ViewCardsHeader activeIndex={0} />
         <div className="section" style={{ paddingTop: '1rem' }}>
           <CardsVerticalGrid gridItems={intro.blurbs} />
         </div>
@@ -30,7 +30,7 @@ export const VideosPageTemplate = ({
   </div>
 )
 
-VideosPageTemplate.propTypes = {
+BlogsPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
@@ -54,12 +54,12 @@ VideosPageTemplate.propTypes = {
   }),
 }
 
-const VideosPage = ({ data }) => {
+const BlogsPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
   return (
     <Layout>
-      <VideosPageTemplate
+      <BlogsPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
@@ -74,7 +74,7 @@ const VideosPage = ({ data }) => {
   )
 }
 
-VideosPage.propTypes = {
+BlogsPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -82,10 +82,10 @@ VideosPage.propTypes = {
   }),
 }
 
-export default VideosPage
+export default BlogsPage
 
-export const videosPageQuery = graphql`
-  query VideosPageTemplate($id: String!) {
+export const blogsPageQuery = graphql`
+  query BlogsPageTemplate($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title

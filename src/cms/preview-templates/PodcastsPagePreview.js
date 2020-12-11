@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { VideosPageTemplate } from '../../templates/videos-page'
+import { PodcastsPageTemplate } from '../../templates/podcasts-page'
 
-const VideosPagePreview = ({ entry, getAsset }) => {
+const PodcastsPagePreview = ({ entry, getAsset }) => {
   const entryBlurbs = entry.getIn(['data', 'intro', 'blurbs'])
   const blurbs = entryBlurbs ? entryBlurbs.toJS() : []
 
@@ -13,7 +13,7 @@ const VideosPagePreview = ({ entry, getAsset }) => {
   const pricingPlans = entryPricingPlans ? entryPricingPlans.toJS() : []
 
   return (
-    <VideosPageTemplate
+    <PodcastsPageTemplate
       image={getAsset(entry.getIn(['data', 'image']))}
       title={entry.getIn(['data', 'title'])}
       heading={entry.getIn(['data', 'heading'])}
@@ -46,11 +46,11 @@ const VideosPagePreview = ({ entry, getAsset }) => {
   )
 }
 
-VideosPagePreview.propTypes = {
+PodcastsPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
   getAsset: PropTypes.func,
 }
 
-export default VideosPagePreview
+export default PodcastsPagePreview

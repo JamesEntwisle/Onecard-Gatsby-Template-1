@@ -1,6 +1,6 @@
 ---
-templateKey: 'videos-page'
-path: /videos
+templateKey: 'podcasts-page'
+path: /podcasts
 title: Our Coffee
 image: /img/jumbotron.jpg
 heading: Great coffee with a conscience
@@ -11,28 +11,27 @@ description: >-
   anyone.
 intro:
   blurbs:
-    - image: /img/videos/1.png
+    - image: /img/podcasts/podcasts_1.png
       text: >
-        What is onecard.bio?
-    - image: /img/videos/2.png
+        Build & monetise your personal brand
+    - image: /img/podcasts/podcasts_2.png
       text: >
-        How to create a landing page for your content
-    - image: /img/videos/3.png
+        Why your network is tired of endless links
+    - image: /img/podcasts/podcasts_3.png
       text: >
-        10x your link in bio conversions
-    - image: /img/videos/4.png
+        We interview Cary Vaynerchuk
+    - image: /img/podcasts/podcasts_4.png
       text: >
-        x Stop using Linktree x
-    - image: /img/videos/5.png
+        1 million followers in 12 months: how we did it
+    - image: /img/podcasts/podcasts_1.png
       text: >
-        Goodbye Links.
-        Hello Cards Videos
-    - image: /img/videos/1.png
+        Build & monetise your personal brand
+    - image: /img/podcasts/podcasts_2.png
       text: >
-        "The greatest link in bio tool ever"
-    - image: /img/videos/2.png
+        Why your network is tired of endless links
+    - image: /img/podcasts/podcasts_3.png
       text: >
-        What is onecard.bio?
+        We interview Cary Vaynerchuk
   heading: What we offer
   description: >
     Kaldi is the ultimate spot for coffee lovers who want to learn about their
