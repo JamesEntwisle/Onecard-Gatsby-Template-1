@@ -9,7 +9,7 @@ import CardsHorizontalGrid from '../components/CardsHorizontalGrid'
 export const IndexPageTemplate = ({
   image,
   title,
-   heading,
+  heading,
   subheading,
   mainpitch,
   description,
@@ -19,54 +19,24 @@ export const IndexPageTemplate = ({
     <section className="section section--gradient" style={{ paddingTop: '1rem' }}>
       <div className="container">
         <div className="content">
-          <div className="cards-wrapper">
-            <h2 className="cards-wrapper-header">
-              <span itemProp="headline">Blogs</span>
-            </h2>
-            
-            <h5 style={{ margin: 0 }}>
-              <Link to='/blogs' itemProp="url" style={{ color: '#8C5ACC' }}>
-                View All <FaExternalLinkAlt />
-              </Link>
-            </h5>
-          </div>
-          <CardsHorizontalGrid gridItems={intro.blurbs} />
-          <div className="cards-wrapper">
-            <h2 className="cards-wrapper-header">
-              <span itemProp="headline">Videos</span>
-            </h2>
-            
-            <h5 style={{ margin: 0 }}>
-              <Link to='/videos' itemProp="url" style={{ color: '#8C5ACC' }}>
-                View All <FaExternalLinkAlt />
-              </Link>
-            </h5>
-          </div>
-          <CardsHorizontalGrid gridItems={intro.blurbs} />
-          <div className="cards-wrapper">
-            <h2 className="cards-wrapper-header">
-              <span itemProp="headline">Podcasts</span>
-            </h2>
-            
-            <h5 style={{ margin: 0 }}>
-              <Link to='/podcasts' itemProp="url" style={{ color: '#8C5ACC' }}>
-                View All <FaExternalLinkAlt />
-              </Link>
-            </h5>
-          </div>
-          <CardsHorizontalGrid gridItems={intro.blurbs} />
-          <div className="cards-wrapper">
-            <h2 className="cards-wrapper-header">
-              <span itemProp="headline">Socials</span>
-            </h2>
-            
-            <h5 style={{ margin: 0 }}>
-              <Link to='/socials' itemProp="url" style={{ color: '#8C5ACC' }}>
-                View All <FaExternalLinkAlt />
-              </Link>
-            </h5>
-          </div>
-          <CardsHorizontalGrid gridItems={intro.blurbs} />
+          {
+            intro.cards.map((card) => (
+              <>
+                <div className="cards-wrapper">
+                  <h2 className="cards-wrapper-header">
+                    <span itemProp="headline">{card.header}</span>
+                  </h2>
+                  
+                  <h5 style={{ margin: 0 }}>
+                    <Link to={card.url} itemProp="url" style={{ color: '#8C5ACC' }}>
+                      View All <FaExternalLinkAlt />
+                    </Link>
+                  </h5>
+                </div>
+                <CardsHorizontalGrid gridItems={card.data} />
+              </>
+            ))
+          }
         </div>
       </div>
     </section>
@@ -81,7 +51,7 @@ IndexPageTemplate.propTypes = {
   mainpitch: PropTypes.object,
   description: PropTypes.string,
   intro: PropTypes.shape({
-    blurbs: PropTypes.array,
+    cards: PropTypes.array,
   }),
 }
 
@@ -133,15 +103,19 @@ export const pageQuery = graphql`
         }
         description
         intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
+          cards {
+            header
+            url
+            data {
+              image {
+                childImageSharp {
+                  fluid(maxWidth: 240, quality: 64) {
+                    ...GatsbyImageSharpFluid
+                  }
                 }
               }
+              text
             }
-            text
           }
           heading
           description

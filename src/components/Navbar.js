@@ -53,16 +53,7 @@ const Navbar = class extends React.Component {
               }}
             />
           </Link>
-          <p
-            style={{
-            fontSize: 32,
-            letterSpacing: 1.25,
-            fontFamily: 'Montserrat',
-            fontWeight: 600,
-            margin: 20,
-            color: '#ffffff'
-            }}
-          >
+          <p className="logo-label">
             onecard.bio
           </p>
         </div>
