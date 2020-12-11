@@ -6,7 +6,7 @@ import 'swiper/swiper.scss'
 const CardsVerticalGrid = ({ gridItems }) => (
   <div>
     {gridItems.map((item, index) => (
-      <section key={index} className="section" className="card-section" style={{ flexDirection: 'row', justifyContent: 'flex-start' }}>
+      <section key={index} className="section card-section" style={{ flexDirection: 'row', justifyContent: 'flex-start' }}>
         <div className="has-text-centered">
           <PreviewCompatibleImage imageInfo={item} />
         </div>

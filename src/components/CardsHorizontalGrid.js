@@ -10,8 +10,8 @@ const CardsHorizontalGrid = ({ gridItems }) => (
     slidesPerView={2}
   >
     {gridItems.map((item, index) => (
-      <SwiperSlide key={index} tabIndex={index}>
-        <section className="section" className="card-section">
+      <SwiperSlide key={index}>
+        <section className="section card-section">
           <div className="has-text-centered">
             <PreviewCompatibleImage imageInfo={item} />
           </div>

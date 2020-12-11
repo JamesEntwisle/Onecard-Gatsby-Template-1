@@ -7,12 +7,6 @@ import Layout from '../components/Layout'
 import CardsHorizontalGrid from '../components/CardsHorizontalGrid'
 
 export const IndexPageTemplate = ({
-  image,
-  title,
-  heading,
-  subheading,
-  mainpitch,
-  description,
   intro,
 }) => (
   <div>
@@ -20,8 +14,8 @@ export const IndexPageTemplate = ({
       <div className="container">
         <div className="content">
           {
-            intro.cards.map((card) => (
-              <>
+            intro.cards.map((card, index) => (
+              <div key={index}>
                 <div className="cards-wrapper">
                   <h2 className="cards-wrapper-header">
                     <span itemProp="headline">{card.header}</span>
@@ -34,7 +28,7 @@ export const IndexPageTemplate = ({
                   </h5>
                 </div>
                 <CardsHorizontalGrid gridItems={card.data} />
-              </>
+              </div>
             ))
           }
         </div>
@@ -44,12 +38,7 @@ export const IndexPageTemplate = ({
 )
 
 IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
-  description: PropTypes.string,
   intro: PropTypes.shape({
     cards: PropTypes.array,
   }),
@@ -61,12 +50,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
-        image={frontmatter.image}
         title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
         intro={frontmatter.intro}
       />
     </Layout>
@@ -88,20 +72,6 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        heading
-        subheading
-        mainpitch {
-          title
-          description
-        }
-        description
         intro {
           cards {
             header
@@ -117,8 +87,6 @@ export const pageQuery = graphql`
               text
             }
           }
-          heading
-          description
         }
       }
     }
