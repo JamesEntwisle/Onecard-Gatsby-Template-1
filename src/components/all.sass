@@ -161,6 +161,19 @@ $menu-label-color: $white-ter
   flex-direction: column
   align-items: center
 
+.card-label
+  font-family: Montserrat
+  font-weight: 400
+  padding-left: 10px
+  padding-bottom: 20px
+
+.card-h-label
+  font-family: Montserrat
+  fontW-weight: 400
+  padding-left: 10px
+  padding-bottom: 20px
+  max-width: 160px
+
 .header-wrapper
   height: 105px
   background: rgb(140, 90, 204)
@@ -185,3 +198,20 @@ $menu-label-color: $white-ter
   height: 25px
   position: fixed
   z-index: 1000
+
+.close-button:hover
+  width: 38px
+  height: 38px
+  right: 33.5px
+  bottom: 33.5px
+
+.active-header::before
+  width: 8px
+  height: 8px
+  border-radius: 10px
+  content: ""
+  position: relative
+  bottom: -35px
+  left: 50%
+  background: #8C5ACC
+  display: inherit

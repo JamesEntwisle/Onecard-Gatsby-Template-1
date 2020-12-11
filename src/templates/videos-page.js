@@ -3,11 +3,10 @@ import PropTypes from 'prop-types'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import CardsVerticalGrid from '../components/CardsVerticalGrid'
-import { FaTimesCircle } from 'react-icons/fa'
 import ViewCardsHeader from '../components/ViewCardsHeader'
-import faTimesCircle from '../img/times-circle-regular.svg'
+import CloseButton from '../components/CloseButton'
 
-export const ProductPageTemplate = ({
+export const VideosPageTemplate = ({
   image,
   title,
   heading,
@@ -21,20 +20,17 @@ export const ProductPageTemplate = ({
   <div className="content">
     <section className="section section--gradient" style={{ paddingTop: '1rem' }}>
       <div className="container">
-        <ViewCardsHeader />
+        <ViewCardsHeader activeIndex={1} />
         <div className="section" style={{ paddingTop: '1rem' }}>
           <CardsVerticalGrid gridItems={intro.blurbs} />
         </div>
       </div>
-      <Link to="/" style={{ color: '#E09CED' }}>
-        {/* <FaTimesCircle type="regular" className="close-button"/> */}
-          <img src={faTimesCircle} alt="fa-times-circle" className={"close-button"} />
-      </Link>
+      <CloseButton />
     </section>
   </div>
 )
 
-ProductPageTemplate.propTypes = {
+VideosPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
@@ -58,12 +54,12 @@ ProductPageTemplate.propTypes = {
   }),
 }
 
-const ProductPage = ({ data }) => {
+const VideosPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
   return (
     <Layout>
-      <ProductPageTemplate
+      <VideosPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
@@ -78,7 +74,7 @@ const ProductPage = ({ data }) => {
   )
 }
 
-ProductPage.propTypes = {
+VideosPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -86,7 +82,7 @@ ProductPage.propTypes = {
   }),
 }
 
-export default ProductPage
+export default VideosPage
 
 export const productPageQuery = graphql`
   query ProductPage($id: String!) {

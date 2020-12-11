@@ -15,15 +15,7 @@ const CardsHorizontalGrid = ({ gridItems }) => (
           <div className="has-text-centered">
             <PreviewCompatibleImage imageInfo={item} />
           </div>
-          <p
-            style={{
-              fontFamily: 'Montserrat',
-              fontWeight: 400,
-              paddingLeft: 10,
-              paddingBottom: 20,
-              maxWidth: 160
-            }}
-          >
+          <p className="card-h-label">
             {item.text}
           </p>
         </section>
