@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/swiper.scss'
+import { Link } from 'gatsby'
 
 const CardsHorizontalGrid = ({ gridItems }) => (
   <Swiper
@@ -11,14 +12,16 @@ const CardsHorizontalGrid = ({ gridItems }) => (
   >
     {gridItems.map((item, index) => (
       <SwiperSlide key={index}>
-        <section className="section card-section">
-          <div className="has-text-centered">
-            <PreviewCompatibleImage imageInfo={item} />
-          </div>
-          <p className="card-h-label">
-            {item.text}
-          </p>
-        </section>
+        <Link to={item.link} target="_blank">
+          <section className="section card-section">
+            <div className="has-text-centered">
+              <PreviewCompatibleImage imageInfo={item} />
+            </div>
+            <p className="card-h-label">
+              {item.text}
+            </p>
+          </section>
+        </Link>
       </SwiperSlide>
     ))}
   </Swiper>

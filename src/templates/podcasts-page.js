@@ -66,6 +66,7 @@ export const podcastsPageQuery = graphql`
                 }
               }
             }
+            link
             text
           }
         }

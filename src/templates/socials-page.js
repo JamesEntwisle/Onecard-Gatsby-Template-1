@@ -66,6 +66,7 @@ export const socialsPageQuery = graphql`
                 }
               }
             }
+            link
             text
           }
         }

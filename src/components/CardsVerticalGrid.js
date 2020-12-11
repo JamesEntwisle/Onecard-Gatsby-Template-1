@@ -2,18 +2,21 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 import 'swiper/swiper.scss'
+import { Link } from 'gatsby'
 
 const CardsVerticalGrid = ({ gridItems }) => (
   <div>
     {gridItems.map((item, index) => (
-      <section key={index} className="section card-section" style={{ flexDirection: 'row', justifyContent: 'flex-start' }}>
-        <div className="has-text-centered">
-          <PreviewCompatibleImage imageInfo={item} />
-        </div>
-        <p className="card-label">
-          {item.text}
-        </p>
-      </section>
+      <Link to={item.link} key={index} target="_blank">
+        <section className="section card-section" style={{ flexDirection: 'row', justifyContent: 'flex-start' }}>
+          <div className="has-text-centered">
+            <PreviewCompatibleImage imageInfo={item} />
+          </div>
+          <p className="card-label">
+            {item.text}
+          </p>
+        </section>
+      </Link>
     ))}
   </div>
 )

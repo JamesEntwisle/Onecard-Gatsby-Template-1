@@ -66,6 +66,7 @@ export const videosPageQuery = graphql`
                 }
               }
             }
+            link
             text
           }
         }

@@ -21,39 +21,32 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
           - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Cards, name: cards, widget: list, fields: [{label: Header, name: header, widget: text}, {label: URL, name: url, widget: text}, {label: Data, name: data, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}]}
-      - file: "src/pages/about/index.md"
-        label: "About"
-        name: "about"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Cards, name: cards, widget: list, fields: [{label: Header, name: header, widget: text}, {label: URL, name: url, widget: text}, {label: Data, name: data, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Link, name: link, widget: text}, {label: Text, name: text, widget: text}]}]}]}
       - file: "src/pages/videos/index.md"
         label: "Videos Page"
         name: "videos"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "videos-page"}
           - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
+          - {label: Intro, name: intro, widget: object, fields: [{label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Link, name: link, widget: text}, {label: Text, name: text, widget: text}]}]}
       - file: "src/pages/blogs/index.md"
         label: "Blogs Page"
         name: "blogs"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blogs-page"}
           - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
+          - {label: Intro, name: intro, widget: object, fields: [{label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Link, name: link, widget: text}, {label: Text, name: text, widget: text}]}]}
       - file: "src/pages/podcasts/index.md"
         label: "Podcasts Page"
         name: "podcasts"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "podcasts-page"}
           - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
+          - {label: Intro, name: intro, widget: object, fields: [{label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Link, name: link, widget: text}, {label: Text, name: text, widget: text}]}]}
       - file: "src/pages/socials/index.md"
         label: "Socials Page"
         name: "socials"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "socials-page"}
           - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
+          - {label: Intro, name: intro, widget: object, fields: [{label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Link, name: link, widget: text}, {label: Text, name: text, widget: text}]}]}

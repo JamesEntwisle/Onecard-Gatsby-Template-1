@@ -66,6 +66,7 @@ export const blogsPageQuery = graphql`
                 }
               }
             }
+            link
             text
           }
         }
